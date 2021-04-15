@@ -1,0 +1,11 @@
+<div class="text-center"><mat-card>Add Employee detials</mat-card>
+    <form (ngSubmit)="addEmp(f)" #f="ngForm">
+        <br>
+    <input type="text"  [(ngModel)]="em.emp_id"  name="emp_id" placeholder="emp_id"><br>
+    <input type="text"  [(ngModel)]="em.emp_name"  name="emp_name" placeholder="emp_name"><br>
+    <input type="text"  [(ngModel)]="em.emp_city"  name="emp_city"placeholder="emp_city"><br>
+    <button class="m-1" mat-raised-button color="primary">Add</button>
+    </form>
+    
+
+</div>

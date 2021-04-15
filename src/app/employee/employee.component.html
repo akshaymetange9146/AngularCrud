@@ -1,0 +1,22 @@
+<div class="text-center"><mat-card>Employee detials</mat-card>
+    
+<table class="table table">
+    <thead>
+        <th>id</th>
+        <th>name</th>
+        <th>city</th>
+        <th>delete</th>
+        
+      
+    </thead>
+    <tr *ngFor="let e of employee">
+        <td>{{e.emp_id}}</td>
+        <td>{{e.emp_name}}</td>
+        <td>{{e.emp_city}}</td>
+        <td><button mat-icon color="acent" (click)="empDel(e.emp_id)"> <mat-icon>delete</mat-icon> </button></td>
+        <td><a mat-button [routerLink]="['/editemployee/edit/',e.emp_id]" color="primary">edit</a></td>
+    </tr>
+    </table>
+    <a [routerLink]="['/editemployee/add/0']" mat-button color="primary">add</a>
+    
+</div>
